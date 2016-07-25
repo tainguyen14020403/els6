@@ -6,9 +6,6 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 footer a {
@@ -154,5 +151,14 @@ aside {
 .line {
   border-style: inset;
   border-width: 1px; 
+}
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }  
 }
 
