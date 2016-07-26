@@ -175,3 +175,12 @@ aside {
   width: auto;
   margin-left: 0;
 }
+.categories {
+  list-style: none;
+  li {
+    overflow: auto;
+    padding: 20px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+

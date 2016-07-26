@@ -2,3 +2,6 @@ name_length_max: 50
 password_length_min: 6
 email_length_max: 255
 size_image: 50
+page_max_categories: 5
+page_max_word: 50
+page_max_users: 10

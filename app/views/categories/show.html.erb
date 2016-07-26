@@ -1,0 +1,14 @@
+<% provide(:title, t("categories")) %>
+<h1><%= @category.name %></h1>
+
+<%= will_paginate @words %>
+
+<ul class="categories">
+  <% @words.each do |word| %>
+    <li>
+      <%= word.content %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @words %>
