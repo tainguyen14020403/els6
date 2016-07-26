@@ -1,0 +1,8 @@
+<%= provide(:title, t("word_list")) %>
+<h1><%= t("word_list") %></h1>
+
+<ul class="words">
+  <% @words.each do |word| %>
+    <li><%= word.content %></li>
+  <% end %>
+</ul>

@@ -18,11 +18,11 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
-            <li><%= link_to t("profile"), "#", class: "glyphicon glyphicon-user" %></li> 
+            <li><%= link_to t("profile"), current_user, class: "glyphicon glyphicon-user" %></li> 
             <li><%= link_to t("logout"), logout_path, class: "glyphicon glyphicon-log-out", method: :delete %></li>
           <% else %>
             <li><%= link_to t("login-title"), login_path, class: "glyphicon glyphicon-log-in" %></li>
-            <li><%= link_to t("signup-title"), "#", class: "glyphicon glyphicon-user" %></li>
+            <li><%= link_to t("signup-title"), signup_path, class: "glyphicon glyphicon-user" %></li>
           <% end %>
         </ul>
       </div>

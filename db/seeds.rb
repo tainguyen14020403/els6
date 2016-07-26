@@ -11,3 +11,7 @@ User.create!(name:  "Example User",
     password:              password,
     password_confirmation: password,admin: 0)
 end
+
+500.times do 
+  Word.create!(content: "English", mean: "Vietnamese", category_id: 1)
+end

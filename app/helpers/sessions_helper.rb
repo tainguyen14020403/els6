@@ -36,4 +36,8 @@ module SessionsHelper
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
+
+  def is_admin?
+    current_user.admin == 1
+  end
 end
