@@ -17,8 +17,13 @@
           <li><%= link_to t("help"), help_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t("login-title"), "#", class: "glyphicon glyphicon-log-in" %></li>
-          <li><%= link_to t("signup-title"), new_user_path, class: "glyphicon glyphicon-user" %></li>
+          <% if logged_in? %>
+            <li><%= link_to t("profile"), "#", class: "glyphicon glyphicon-user" %></li> 
+            <li><%= link_to t("logout"), logout_path, class: "glyphicon glyphicon-log-out", method: :delete %></li>
+          <% else %>
+            <li><%= link_to t("login-title"), login_path, class: "glyphicon glyphicon-log-in" %></li>
+            <li><%= link_to t("signup-title"), "#", class: "glyphicon glyphicon-user" %></li>
+          <% end %>
         </ul>
       </div>
     </nav>
