@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   post   "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
 
+  namespace :admin do
+    resources :users, only: [:index, :destroy]
+    resources :categories
+  end
+  
   resources :users
   resources :categories, only: [:index, :show]
   resources :words
