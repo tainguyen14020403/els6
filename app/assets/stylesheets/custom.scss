@@ -146,6 +146,26 @@ aside {
   p {
     margin-top: 130px;
   }
+  section.stats {
+    margin-left: 40px;
+    a {
+      float: left;
+      padding: 0 10px;
+      border-left: 1px solid $gray-lighter;
+      color: gray;
+      &:first-child {
+        padding-left: 0;
+        border: 0;
+      }
+      &:hover {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+    strong {
+      display: block;
+    }
+  }
 }
 
 .line {
@@ -184,3 +204,6 @@ aside {
   }
 }
 
+.users.follow {
+  padding: 0;
+}

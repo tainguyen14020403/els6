@@ -12,7 +12,8 @@
       <%= f.label :mean %>
       <%= f.text_field :mean, class: "form-control" %>
       
-      <%= f.collection_select :category_id, Category.all, :id, :name %>
+      <%= f.label :Category %>
+      <%= f.collection_select :category_id, Category.all, :id, :name, {}, {class: "form-control"} %>
 
       <%= f.submit t("add_word"), class: "btn btn-primary" %>
 

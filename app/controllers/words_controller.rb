@@ -45,7 +45,7 @@ class WordsController < ApplicationController
     @categories = Category.all
     if @categories.empty?
       flash[:danger] = t("categories_is_empty")
-      redirect_to root_path
+      redirect_to new_admin_category_path
     end
   end
 end

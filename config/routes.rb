@@ -13,7 +13,11 @@ Rails.application.routes.draw do
     resources :categories
   end
   
-  resources :users
+  resources :users do
+    resources :followings, only: [:index]
+    resources :followers, only: [:index]
+  end
   resources :categories, only: [:index, :show]
   resources :words
+  resources :relationships, only: [:create, :destroy]
 end
