@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user,   only: [:edit, :update]
+  before_action :find_user, only: [:show, :edit, :index]
 
   def index
     @users = User.paginate(page: params[:page], per_page: Settings.page_max_users)
   end
 
   def show
-    @user = User.find_by(id: params[:id])
   end
   
   def new
@@ -49,4 +49,8 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     redirect_to(root_url) unless @user == current_user
   end
+
+  def find_user
+    @user = User.find_by(id: params[:id])
+  end 
 end
