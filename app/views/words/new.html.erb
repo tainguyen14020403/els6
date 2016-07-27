@@ -1,0 +1,22 @@
+<%= provide(:title, t("new_word")) %>
+
+<h1><%= t("new_word") %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@word) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      
+      <%= f.label :content %>
+      <%= f.text_field :content, class: "form-control" %>
+
+      <%= f.label :mean %>
+      <%= f.text_field :mean, class: "form-control" %>
+      
+      <%= f.collection_select :category_id, Category.all, :id, :name %>
+
+      <%= f.submit t("add_word"), class: "btn btn-primary" %>
+
+    <% end %>
+
+  </div>
+</div>

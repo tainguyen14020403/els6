@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :users
   resources :categories, only: [:index, :show]
+  resources :words
 end

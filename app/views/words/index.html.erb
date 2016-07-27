@@ -1,0 +1,13 @@
+<%= provide(:title, t("word_list")) %>
+<h1><%= t("word_list") %></h1>
+
+<%= will_paginate %>
+
+<% @words.each do |word| %>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3", id="word_content"><%= word.content %></div>
+    <div class="col-md-3 col-md-offset-3", id="word_mean"><%= word.mean %></div>
+  </div>
+<% end %>
+
+<%= will_paginate %>

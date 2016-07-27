@@ -1,0 +1,11 @@
+<%= provide(:title, t("show_word")) %>
+
+<div class="row", id="header">
+  <div class="col-md-3 col-md-offset-3"><%= t("english") %></div>
+  <div class="col-md-3 col-md-offset-3"><%= t("vietnam") %></div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 col-md-offset-3", id="word_content"><%= @word.content %></div>
+  <div class="col-md-3 col-md-offset-3", id="word_mean"><%= @word.mean %></div>
+</div>
