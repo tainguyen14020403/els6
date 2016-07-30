@@ -5,3 +5,4 @@ size_image: 50
 page_max_categories: 5
 page_max_word: 50
 page_max_users: 10
+max_word_user: 20

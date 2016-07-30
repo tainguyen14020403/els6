@@ -1,0 +1,9 @@
+<% provide(:title, t("home")) %>
+<ul class="categories">
+  <%= @words.count %>
+  <% @words.each do |word| %>
+    <li>
+      <%= word.content %>
+    </li>
+  <% end %>
+</ul>
