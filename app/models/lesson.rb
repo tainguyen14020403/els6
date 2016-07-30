@@ -13,5 +13,8 @@ class Lesson < ActiveRecord::Base
     @words.each do |word|
       Result.create_result(self.user_id, id, word.id)
     end
+    if @words.count > 0
+      Activity.create_activity(category_id, @words.count, user_id)
+    end
   end
 end

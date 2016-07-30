@@ -1,0 +1,8 @@
+<li>
+  <%= link_to gravatar_for(activity.user, size: Settings.size_image), activity.user %>
+  <span class="content">
+    <%= t("learn") %><%= activity.words_count %>
+    <%= t("word-in-lesson") %><%= activity.category.name %>
+    <%= t("at") %><%= activity.created_at %>
+  </span>
+</li>
