@@ -8,6 +8,9 @@
         </h1>
         <h2><%= current_user.name %></h2>
       </section>
+      <section class="stats">
+        <%= render "shared/stats" %>
+      </section>
     </aside>
     <aside class="col-md-6">
       <p><%= t("activities") %></p>

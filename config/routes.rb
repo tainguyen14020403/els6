@@ -8,12 +8,13 @@ Rails.application.routes.draw do
   post   "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
 
-  resources :words
+  resources :words, only: [:index, :show]
   resources :relationships, only: [:create, :destroy]
 
   namespace :admin do
     resources :users, only: [:index, :destroy]
     resources :categories
+    resources :words
   end
   
   resources :users do
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
     resources :followers, only: [:index]
   end
 
-  resources :categories do
+  resources :categories, only: [:index, :show] do
     resources :lessons, only: [:show, :create]
   end
 end
