@@ -12,6 +12,9 @@
       <td><%= @word.content %></td>
       <td><%= @word.mean %></td>
       <td><%= @word.category.name %></td>
+      <td><%= link_to t("edit"), edit_admin_word_path %></td>
+       <td><%= link_to t("delete"), [:admin, @word], method: :delete,
+         data: {confirm: t("confirm-delete")} %></td>
     </tr>
   </tbody>
 </table>
