@@ -15,4 +15,10 @@ class ApplicationController < ActionController::Base
       redirect_to(root_url)
     end
   end
+
+  def find_word_in_lesson(lesson_id)
+    @lesson = Lesson.find_by(id: lesson_id)
+    @category = @lesson.category
+    @words = @category.words.words_in_lesson(@lesson.id)
+  end
 end

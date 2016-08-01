@@ -7,3 +7,4 @@ page_max_word: 50
 page_max_users: 10
 max_word_user: 20
 max_activities: 5
+answers_per_word: 4

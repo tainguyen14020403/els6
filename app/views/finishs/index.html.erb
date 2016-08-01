@@ -1,0 +1,26 @@
+<% provide(:title, t("all_result")) %>
+
+<h1><%= t("all_result") %></h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= t("category") %></th>
+      <th><%= t("lesson") %></th>
+      <th><%= t("right_answer") %></th>
+      <th><%= t("total_question") %></th>
+      <th><%= t("show") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each_index do |i| %>
+      <tr class="info">
+        <td><%= @lessons[i].category.name %></td>
+        <td><%= i + 1 %> </td>
+        <td><%= @lessons[i].result %></td>
+        <td><%= @results[i].count %></td>
+        <td><%= link_to t("show"), finish_path(id: @lessons[i].id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

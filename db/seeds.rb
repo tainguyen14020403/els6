@@ -23,9 +23,7 @@ end
 100.times do
   Word.create!(content: "Trip", mean: "Chuyen di", category_id: 3)
 end
-300.times do
-  Answer.create!(mean: "Fake",status: 0)
-end
+
 users = User.all
 user  = users.first
 following = users[2..50]

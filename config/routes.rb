@@ -25,4 +25,6 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show] do
     resources :lessons, only: [:show, :create]
   end
+
+  resources :finishs
 end

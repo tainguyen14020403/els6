@@ -1,9 +1,21 @@
-<% provide(:title, t("home")) %>
-<ul class="categories">
-  <%= @words.count %>
+<% provide(:title, t("lesson")) %>
+
+<%= form_for :finish, url: finishs_path do |f| %>
+
+  <%= hidden_field_tag :category_id, @category.id %>
+  <%= hidden_field_tag :lesson_id, @lesson.id %>
+
   <% @words.each do |word| %>
-    <li>
-      <%= word.content %>
-    </li>
+    <%= word.content + t("question") %>
+    <% word.answers.each do |answer| %>
+      <div class="radio">
+        <label>
+          <%= f.radio_button word.id.to_s, answer.mean  %>
+          <%= f.label answer.mean %>
+        </label>
+      </div>
+    <% end %>
+    <br>
   <% end %>
-</ul>
+  <%= f.submit t("answer"), class: "btn btn-primary" %>
+<% end %>

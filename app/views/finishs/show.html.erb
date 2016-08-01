@@ -1,0 +1,27 @@
+<% provide(:title, t("result")) %>
+
+<p><%= t("right_answer") %><%= @lesson.result %></p>
+<p><%= t("total_question") %><%= @words.count %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= t("Question") %></th>
+      <th><%= t("Key") %></th>
+      <th><%= t("result") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @results.each do |result| %>
+      <tr class="info">
+        <td><%= result.word.content %></td>
+        <td><%= result.word.mean %></td>
+        <% if result.status? %>
+          <td><%= t("true") %></td>
+        <% else %>
+          <td><%= t("false") %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

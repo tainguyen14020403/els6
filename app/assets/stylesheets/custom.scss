@@ -100,16 +100,6 @@ p {
   height: 20px;
 }
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-input {
-  height: auto;
-}
-
 #error_explanation {
   color: red;
   ul {
@@ -183,7 +173,7 @@ aside {
 }
 
 .checkbox {
-  margin-top: -10px;
+  margin-top: 10px;
   margin-bottom: 10px;
   span {
     margin-left: 20px;
@@ -207,6 +197,7 @@ aside {
 .users.follow {
   padding: 0;
 }
+
 .activities {
   list-style: none;
   padding: 0;
@@ -233,6 +224,7 @@ aside {
 hr {
   margin-bottom: 0px;
 }
+
 .btn-admin {
   padding-left: 40px;  
 }
@@ -251,4 +243,16 @@ hr {
 .btn-primary:active, .btn-primary.active {
     background: #007299;
     box-shadow: none;
+}
+
+#custom {
+  input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  input {
+  height: auto;
+  }
 }
