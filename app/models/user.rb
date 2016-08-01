@@ -57,4 +57,8 @@ class User < ActiveRecord::Base
   def following?(other_user)
     following.include?(other_user)
   end
+
+  def feed
+    Activity.where("user_id = ?", id)
+  end
 end
