@@ -144,7 +144,7 @@ aside {
     }
   }
   p {
-    margin-top: 130px;
+    margin-top: 10px;
   }
   section.stats {
     margin-left: 70px;
@@ -232,4 +232,23 @@ aside {
 }
 hr {
   margin-bottom: 0px;
+}
+.btn-admin {
+  padding-left: 40px;  
+}
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
 }
